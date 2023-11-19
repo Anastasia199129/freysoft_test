@@ -1,0 +1,51 @@
+.container
+  position: relative
+  padding-top: 40px
+
+  &::before
+    content: ""
+    position: absolute
+    width: 285px
+    height: 149px
+    top: 0
+    left: 50%
+    transform: translate(-50%)
+    background-color: #9A63FB
+    border-radius: 24px
+
+  .card
+    position: relative
+    padding: 25px 35px
+    background-color: #2F3046
+    color: white
+    border-radius: 24px
+
+    &::after
+      position: absolute
+      content: url(./img/points.svg)
+      top: 8px
+      right: 20px
+
+    h3
+      font-weight: 500
+      line-height: 1.17
+      margin-bottom: 20px
+
+    .balance
+      font-weight: 700
+      font-size: 30px
+      line-height: 1.17
+      margin-bottom: 40px
+
+    .cardNumber
+      position: relative
+      font-weight: 500
+      font-size: 18px
+      line-height: 1.21
+      color: #A3A3A3
+
+      &::before
+        position: absolute
+        bottom: -5px
+        right: 0
+        content: url(./img/cardSvg.svg)

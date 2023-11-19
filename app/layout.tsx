@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.sass'
+import '../styles/globals.sass'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
+import Container from '@/components/Container/Container'
+
+// import { Provider } from 'react-redux'
+// import { PersistGate } from 'redux-persist/integration/react'
+// import { makeStore, persistor } from '../lib/redux/store' // Adjust the path as needed
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,12 +21,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // const store = makeStore()
+
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <Container>
+        {/* <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}> */}
+            {children}
+            <Footer />
+          {/* </PersistGate>
+        </Provider> */}
+        </Container>
       </body>
     </html>
   )
