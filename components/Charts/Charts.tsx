@@ -52,10 +52,12 @@ export default function SimpleCharts() {
 
   return (
     <div suppressHydrationWarning={true}>
-      {currentYear?.months?.length > 0 ? (
+      {currentYear?.months?.length > 0 && (
         <BarChart
+        
           xAxis={[
             {
+              scaleType: 'band',
               id: 'barCategories',
               data: [
                 'Jan',
@@ -71,19 +73,16 @@ export default function SimpleCharts() {
                 'Nov',
                 'Dec',
               ],
-              scaleType: 'band',
             },
           ]}
           series={[
             {
+              color: '#FAFAFA',
               data: [...currentYear.months].map((el) => el.total),
             },
           ]}
-          width={500}
           height={300}
         />
-      ) : (
-        <div></div>
       )}
     </div>
   )
