@@ -1,7 +1,9 @@
+'use client'
+
 import data from '@/public/data/card.json'
 
 import s from './Card.module.sass'
-import formatNumberString from '@/lib/helpers/formatNumberString'
+import formatNumberString from '@/lib/helpers/halpers'
 
 export default function Card() {
 

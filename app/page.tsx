@@ -1,17 +1,20 @@
 import ButtonSection from '@/components/ButtonSection/ButtonSection'
-import Card from '@/components/Card/Card'
 import Header from '@/components/Header/Header'
-import DatePicker from '@/components/DatePicker/DatePicker'
+import Charts from '@/components/Charts/Charts'
+import Select from '@/components/Select/Select'
+import ContainerCalendarDataPicker from '@/components/Card/ContainerCalendarDataPicker/ContainerCalendarDataPicker'
 
 export default function Home() {
+
   return (
     <>
       <Header title='Home' avatarSrc='/img/header/avatar.svg' />
       <main>
         <div>
           <ButtonSection />
-          <Card />
-          <DatePicker/>
+          <ContainerCalendarDataPicker />
+          <Select />
+          <Charts />
         </div>
       </main>
     </>
