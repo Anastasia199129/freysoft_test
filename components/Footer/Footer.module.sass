@@ -5,20 +5,71 @@
   justify-content: space-between
   padding: 15px 0px
 
-  
   .link
+    position: relative
 
-    &:hover
-      img
-        fill: #FF643B
-        stroke: #FF643B
-        color: #FF643B
+    &:first-child
 
-      svg
-        fill: #FF643B
-        stroke: #FF643B
+      &::before
+        content: url('./img/home.svg')
+        width: 21px
+        height: 26px
+        display: block
+        transition: fill 0.3s ease  
+        filter: grayscale(100%)
 
-  .active
-    svg
-      fill: #FF643B
-      stroke: #FF643B
+      &:hover
+        &::before
+          filter: none
+
+    &:nth-child(2)
+
+      &::before
+        content: url('./img/card.svg')
+        width: px
+        height: 23px
+        transition: fill 0.3s ease  
+        filter: grayscale(100%)
+
+      &:hover
+        &::before
+          filter: none
+
+    &:nth-child(3)
+
+      &::before
+        content: url('./img/add.svg')
+        width: 29px
+        height: 23px
+
+    &:nth-child(4)
+
+      &::before
+        content: url('./img/calendar.svg')
+        width: 29px
+        height: 23px  
+        transition: fill 0.3s ease  
+        filter: grayscale(100%)
+
+      &:hover
+        &::before
+          filter: none
+
+    &:nth-child(5)
+      
+      &::before
+        content: url('./img/settings.svg')
+        width: 29px
+        height: 23px
+        transition: fill 0.3s ease  
+        filter: grayscale(100%)
+
+      &:hover
+        &::before
+          filter: none
+  //   .img
+
+  // .active
+  //   svg
+  //     fill: #FF643B
+  //     stroke: #FF643B

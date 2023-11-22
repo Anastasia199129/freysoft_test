@@ -8,13 +8,7 @@ export default function Footer() {
   return (
     <div className={s.container}>
       {data?.map(({ id, link, icon }) => (
-        <Link className={s.link} key={id} href={link}>
-          <img 
-            src={icon.url} 
-            alt={icon.alt} 
-            title={icon.title} 
-          />
-        </Link>
+        <Link className={s.link} key={id} href={link}></Link>
       ))}
     </div>
   )

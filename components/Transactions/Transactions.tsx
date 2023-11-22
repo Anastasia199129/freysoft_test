@@ -1,21 +1,21 @@
 'use client'
 
-import s from './Transactions.module.sass'
 
 import { useEffect, useState } from 'react'
-import * as React from 'react'
+import { useSelector } from 'react-redux'
+
 import Box from '@mui/joy/Box'
 import List from '@mui/joy/List'
 import ListItem from '@mui/joy/ListItem'
 import ListItemDecorator from '@mui/joy/ListItemDecorator'
 import ListItemButton from '@mui/joy/ListItemButton'
-import { State } from '@/lib/interfaces'
-
-import { useDispatch, useSelector } from 'react-redux'
 import Item from '../Item/Item'
 
+import { State } from '@/lib/interfaces'
+
+import s from './Transactions.module.sass'
+
 export default function Transactions() {
-  const dispatch = useDispatch()
   const data = useSelector(
     (state: State) => state?.selectedData?.selectedData?.months
   )
@@ -25,7 +25,7 @@ export default function Transactions() {
 
   useEffect(() => {
     if (data.length > 0) {
-      const result = data.reduce((acc: [any], el) => {
+      const result = data.reduce((acc: [any], el: { transactions: any }) => {
         acc.push(...el.transactions)
         return acc
       }, [])
@@ -42,7 +42,10 @@ export default function Transactions() {
   return (
     <div>
       <div className={s.titleWrapper}>
-        <h3>Transactions</h3> <button onClick={onViewAllClick} type='button'>View All</button>
+        <h3>Transactions</h3>{' '}
+        <button onClick={onViewAllClick} type='button'>
+          View All
+        </button>
       </div>
       {transactions.length > 0 && (
         <Box
@@ -75,9 +78,6 @@ export default function Transactions() {
                     sx={{
                       background: '#FAFAFA',
                       borderRadius: '10px',
-                      '&:hover': {
-                        background: 'red',
-                      },
                     }}
                   >
                     <ListItemButton

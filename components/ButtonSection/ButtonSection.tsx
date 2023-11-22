@@ -33,7 +33,7 @@ export default function ButtonSection() {
     <div className={s.wrapper}>
       <div className={s.btnContainer}>
         <Button
-          className={s.btn}
+          className={`${s.btn} ${btnFocus.card && s.active}`}
           name='cards'
           autoFocus={btnFocus.card}
           onFocus={onFocuse}
@@ -41,7 +41,7 @@ export default function ButtonSection() {
           Cards
         </Button>
         <Button
-          className={s.btn}
+          className={`${s.btn} ${btnFocus.calendar && s.active}`}
           autoFocus={btnFocus.calendar}
           name='calendar'
           onFocus={onFocuse}
