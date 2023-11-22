@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "link": "",
+    "icon": {
+      "url": "/img/footer/home.svg",
+      "alt": "home",
+      "title": "home"
+    }
+  },
+  {
+    "id": "2",
+    "link": "",
+    "icon": {
+      "url": "/img/footer/card.svg",
+      "alt": "card",
+      "title": "card"
+    }
+  },
+  {
+    "id": "3",
+    "link": "",
+    "icon": {
+      "url": "/img/footer/add.svg",
+      "alt": "add",
+      "title": "add"
+    }
+  },
+  {
+    "id": "4",
+    "link": "",
+    "icon": {
+      "url": "/img/footer/calendar.svg",
+      "alt": "calendar",
+      "title": "calendar"
+    }
+  },
+  {
+    "id": "5",
+    "link": "",
+    "icon": {
+      "url": "/img/footer/settings.svg",
+      "alt": "settings",
+      "title": "settings"
+    }
+  }
+]
