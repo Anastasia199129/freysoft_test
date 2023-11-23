@@ -2,11 +2,11 @@
 
 import data from '@/public/data/card.json'
 
-import s from './Card.module.sass'
 import formatNumberString from '@/lib/helpers/halpers'
 
-export default function Card() {
+import s from './Card.module.sass'
 
+export default function Card() {
   
   return (
     <div className={s.container}>
